@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk App.compileSdk
+
+    defaultConfig {
+        applicationId "com.example.random_user"
+        minSdk App.minSdk
+        targetSdk App.targetSdk
+        versionCode App.versionCode
+        versionName App.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://randomuser.me/\"")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = App.jvmTarget
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation Libs.coreKtx
+
+    implementation Libs.composeUi
+    implementation Libs.composePreview
+    implementation Libs.composeMaterial
+    implementation Libs.composeActivity
+
+    implementation Libs.lifecycleRuntime
+    implementation Libs.lifecycleViewModel
+
+    implementation Libs.koin
+
+    implementation Libs.retrofit
+    implementation Libs.retrofitGsonConverter
+
+    implementation Libs.okhttpLoggingInterceptor
+
+    implementation Libs.coroutines
+
+    implementation Libs.coil
+
+    testImplementation LibTests.junit
+    androidTestImplementation LibTests.junitExt
+
+    androidTestImplementation LibTests.espressoCore
+    androidTestImplementation LibTests.composeJunit
+    androidTestImplementation LibTests.composeManifest
+    androidTestImplementation LibTests.runner
+    androidTestImplementation LibTests.rules
+
+    testImplementation LibTests.coroutinesTest
+    testImplementation LibTests.mockk
+    androidTestImplementation  LibTests.mockkAndroid
+    testImplementation LibTests.turbine
+    testImplementation LibTests.mockWebServer
+    testImplementation LibTests.archCore
+}
