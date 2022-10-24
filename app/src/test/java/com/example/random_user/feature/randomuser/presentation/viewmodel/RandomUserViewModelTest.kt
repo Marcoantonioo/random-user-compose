@@ -1,6 +1,5 @@
 package com.example.random_user.feature.randomuser.presentation.viewmodel
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import app.cash.turbine.test
 import com.example.random_user.feature.randomuser.commom.MainDispatcherRule
 import com.example.random_user.feature.randomuser.utils.TestUtils
@@ -28,9 +27,6 @@ class RandomUserViewModelTest {
 
     @get:Rule
     val mainDispatcherRule = MainDispatcherRule()
-
-    @get:Rule
-    val localTestRule = InstantTaskExecutorRule()
 
     @Before
     fun setup() {

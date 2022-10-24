@@ -74,6 +74,4 @@ object LibTests {
     const val mockkAndroid = "io.mockk:mockk-android:1.12.0"
 
     const val turbine = "app.cash.turbine:turbine:0.11.0"
-    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:4.9.3"
-    const val archCore = "androidx.arch.core:core-testing:2.1.0"
 }

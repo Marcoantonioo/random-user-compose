@@ -91,6 +91,4 @@ dependencies {
     testImplementation LibTests.mockk
     androidTestImplementation  LibTests.mockkAndroid
     testImplementation LibTests.turbine
-    testImplementation LibTests.mockWebServer
-    testImplementation LibTests.archCore
 }
