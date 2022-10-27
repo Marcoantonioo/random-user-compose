@@ -26,5 +26,8 @@
 run ./gradlew testDebugUnitTest para gerar o report da cobertura de testes unitários
 
 # CI
-Criado CI para rodar os tests unitários, gerar um APK e subir no artifactory
-Para rodar, basta abrir um PR para a branch main
+Criado CI para rodar os tests unitários, gerar um APK e subir no artifactory   
+Para rodar, basta abrir um PR para a branch main   
+## TODO   
+Melhorar CI para gerar um APK apenas quando for mergeado um PR na branch de release_candidate   
+Melhorar CI para rodar o ktlint check
