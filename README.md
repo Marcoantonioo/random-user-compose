@@ -24,3 +24,6 @@
 - JaCoCo
 
 run ./gradlew testDebugUnitTest para gerar o report da cobertura de testes unitários
+
+# CI
+Criado CI para rodar os tests unitários, gerar um APK e subir no artifactory
