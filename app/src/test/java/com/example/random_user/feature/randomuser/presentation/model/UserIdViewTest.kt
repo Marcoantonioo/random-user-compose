@@ -14,8 +14,8 @@ class UserIdViewTest {
         val result = entity.toView()
 
         result.run {
-            assertEquals(name, "name")
-            assertEquals(value, "name")
+            assertEquals(name, name)
+            assertEquals(value, value)
         }
     }
 }
