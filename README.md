@@ -1,4 +1,4 @@
-﻿# random-user-compose
+# random-user-compose
 #### Projeto que faz chamadas a api https://randomuser.me/api;
 
 # O que foi utilizado
