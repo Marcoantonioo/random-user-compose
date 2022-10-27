@@ -24,3 +24,4 @@
 - JaCoCo
 
 run ./gradlew testDebugUnitTest para gerar o report da cobertura de testes unitários
+
