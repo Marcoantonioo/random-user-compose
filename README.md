@@ -1,4 +1,4 @@
-﻿# random-user-compose
+# random-user-compose
 #### Projeto que faz chamadas a api https://randomuser.me/api;
 
 # O que foi utilizado
@@ -25,3 +25,6 @@
 
 run ./gradlew testDebugUnitTest para gerar o report da cobertura de testes unitários
 
+# CI
+Criado CI para rodar os tests unitários, gerar um APK e subir no artifactory
+Para rodar, basta abrir um PR para a branch main
