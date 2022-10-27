@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitConfig {
     private const val TIMEOUT = 60L
+    private const val BASE_URL = "https://randomuser.me/"
 
     internal fun provideRetrofit(): Retrofit {
         val gson = GsonBuilder()
@@ -18,7 +19,7 @@ object RetrofitConfig {
             .create()
 
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(BASE_URL)
             .client(provideOkHttpClient())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
