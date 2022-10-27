@@ -27,3 +27,4 @@ run ./gradlew testDebugUnitTest para gerar o report da cobertura de testes unit√
 
 # CI
 Criado CI para rodar os tests unit√°rios, gerar um APK e subir no artifactory
+Para rodar, basta abrir um PR para a branch main
