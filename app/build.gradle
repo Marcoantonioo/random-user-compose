@@ -1,7 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'jacoco'
 }
+
+apply from: '../jacoco.gradle'
 
 android {
     compileSdk App.compileSdk
@@ -22,6 +25,7 @@ android {
     buildTypes {
         debug {
             buildConfigField("String", "BASE_URL", "\"https://randomuser.me/\"")
+            testCoverageEnabled true
         }
 
         release {
@@ -38,7 +42,14 @@ android {
         jvmTarget = App.jvmTarget
     }
 
+
     testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+                excludes = ['jdk.internal.*']
+            }
+        }
         unitTests.returnDefaultValues = true
     }
 
